@@ -1,4 +1,4 @@
-# Fall26_CS7810_DHG
+# CS7810 DHG
 Class project for CS 7810 (Fall 2026). Work in progress.
 
 1. Competency questions and definitions: see competency_questions.md - Oct 11, 2026
