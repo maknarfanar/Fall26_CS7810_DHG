@@ -26,7 +26,7 @@ Bridges Datasets: Anomaly Assessments, Run and Anomaly Results
 Bridges Datasets: Run and Anomaly Results, LiDAR Tiles
 
 ## Potential Datasets
-* [LiDAR Tiles]: tile serial, county, survey year, resolution, CRS, and tile bounds, for a small slice of the master set covering the counties used in the project (external, compiling)
-* [Verified Hopewell Sites]: UNESCO or other site name, lat/long, and geometry type (point or boundary), plus earthwork type if the source has it (external)
-* [Run and Anomaly Results]: run ID, seed, threshold value, list of tiles processed by the run, anomaly ID, patch ID, parent tile serial, window position in the tile, and reconstruction error (created for this project)
-* [Anomaly Assessments]: anomaly ID, reviewer, date, determination (not a candidate / possible candidate), feature type if it's something else, and notes (created for this project)
+* [LiDAR Tiles]: tile serial, county, survey year, resolution, CRS, and tile bounds, for a small slice of the master set covering the counties used in the project
+* [Verified Hopewell Sites]: UNESCO or other site name, lat/long, and geometry type (point or boundary), plus earthwork type if the source has it
+* [Run and Anomaly Results]: run ID, seed, threshold value, list of tiles processed by the run, anomaly ID, patch ID, parent tile serial, window position in the tile, and reconstruction error
+* [Anomaly Assessments]: anomaly ID, reviewer, date, determination (not a candidate / possible candidate), feature type if it's something else, and notes
