@@ -37,7 +37,7 @@
 
 * County
     * Rationale: Groups tiles for the county comparison (CQ10).
-    * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole)), Sequence ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence)) if you keep the path order
+    * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole)), Sequence ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence))
     * Source Dataset(s): LiDAR Tiles
  
   
