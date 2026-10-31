@@ -30,12 +30,12 @@
  
   
 * Tile
-    * Rationale: The LiDAR image unit that contains patches; the main join point across datasets (CQ2 to CQ10). It carries the survey year and resolution used to compare tiles (CQ3, CQ7, CQ8) as plain properties.
+    * Rationale: The LiDAR image unit that contains patches; the main join point across datasets (CQ2 to CQ10). It carries the survey year, county, CRS, and resolution in feet used to compare tiles (CQ3, CQ7, CQ8, CQ10) as properties.
     * Connected Pattern: Spatial Object ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object)), Spatial Extent ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-extent)), Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole))
     * Source Dataset(s): LiDAR Tiles, Run and Anomaly Results
  
 
-* County
+* County -- to be deleted as this will now be a property 
     * Rationale: Groups tiles for the county comparison (CQ10).
     * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole)), Sequence ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence))
     * Source Dataset(s): LiDAR Tiles
@@ -54,8 +54,8 @@
  
   
 * Anomaly Assessment
-    * Rationale: A reviewer's judgment about an anomaly; needed for every question about candidates and other features (CQ6, CQ7, CQ9). The reviewer and date are plain properties. There will be no ground-truthing in the current project. 
-    * Connected Pattern: Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation)), Provenance ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/provenance))
+    * Rationale: A reviewer's judgment about an anomaly; needed for every question about candidates and other features (CQ6, CQ7, CQ9). There is only one reviewer for this project at this time and the date is irrelevant for this iteration. There will be no ground-truthing in the current project either.
+    * Connected Pattern: Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation))
     * Source Dataset(s): Anomaly Assessments
  
   
