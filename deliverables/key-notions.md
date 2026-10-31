@@ -24,8 +24,8 @@
  
 
 * Patch
-    * Rationale: The window of a tile that the model examines; the unit that gets flagged and can be flagged again by other runs (CQ1).
-    * Connected Pattern: Part-Whole Contextualized ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole-contextualized)), Spatial Extent ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-extent))
+    * Rationale: The area the model flags; shared across runs and identified by its tile plus row and column of said tile (CQ1).
+    * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole))
     * Source Dataset(s): Run and Anomaly Results
  
   
