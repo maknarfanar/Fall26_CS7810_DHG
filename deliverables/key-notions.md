@@ -61,11 +61,11 @@
   
 * Determination (controlled vocabulary)
     * Rationale: The fixed set of outcomes of an assessment (CQ6, CQ7, CQ9) not a candidate, possible candidate.
-    * Connected Pattern: Name Stub ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/name-stub)), Taxonomy Alignment ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/taxonomy-alignment))
+    * Connected Pattern: 
     * Source Dataset(s): Anomaly Assessments
  
 
 * Feature Type (controlled vocabulary)
     * Rationale: The kind of non-earthwork feature a reviewer identified (CQ7): road, rail, creek, river, pond, other.
-    * Connected Pattern: Name Stub ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/name-stub)), Taxonomy Alignment ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/taxonomy-alignment))
+    * Connected Pattern: 
     * Source Dataset(s): Anomaly Assessments
