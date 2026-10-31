@@ -1,23 +1,23 @@
 # Key Notions
 
 * Model Run
-    * Rationale: A single execution of the CAE with its own seed; needed to say which run flagged what and which runs processed a tile (CQ1, CQ2, CQ4, CQ5, CQ10). The seed is a plain property of the run.
+    * Rationale: A single execution of the CAE with its own seed; needed to say which run flagged what and which runs processed a tile (CQ1, CQ2, CQ4, CQ5, CQ10). The seed and threshold are parameter instatiation properties of the run.
     * Connected Pattern: Computational Observation ODP ([Shimizu, C., Hitzler, P., & Vardeman, C. F. (2023). A Pattern for Modeling Computational Observations. CEUR Workshop Proceedings, 3352.](https://corescholar.libraries.wright.edu/cse/709))
     * Source Dataset(s): Run and Anomaly Results
  
-* Threshold
+* Threshold - to be removed
     * Rationale: The cutoff on reconstruction error that decides whether a patch is flagged; needed to compare runs (CQ1, CQ2, CQ9).
     * Connected Pattern: Quantity ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/quantity))
     * Source Dataset(s): Run and Anomaly Results
  
 
 * Anomaly
-    * Rationale: A patch the model flagged in a run; the central entity linking runs, tiles, sites, and assessments (CQ1 to CQ10).
+    * Rationale: A patch the model flagged in a run; the central entity linking runs, tiles, sites, and assessments (CQ1 to CQ10). This includes a reconstruction error value.
     * Connected Pattern: Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation))
     * Source Dataset(s): Run and Anomaly Results
  
   
-* Reconstruction Error
+* Reconstruction Error folding this into anomaly
     * Rationale: The score that caused a patch to be flagged; needed to compare possible-candidate and not-a-candidate anomalies (CQ9).
     * Connected Pattern: Quantity ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/quantity))
     * Source Dataset(s): Run and Anomaly Results
