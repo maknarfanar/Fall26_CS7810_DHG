@@ -2,7 +2,7 @@
 
 * Model Run
     * Rationale: A single execution of the CAE with its own seed; needed to say which run flagged what and which runs processed a tile (CQ1, CQ2, CQ4, CQ5, CQ10). The seed is a plain property of the run.
-    * Connected Pattern: Event ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/event)), Provenance ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/provenance))
+    * Connected Pattern: Computational Observation ODP ([Shimizu, C., Hitzler, P., & Vardeman, C. F. (2023). A Pattern for Modeling Computational Observations. CEUR Workshop Proceedings, 3352.](https://corescholar.libraries.wright.edu/cse/709))
     * Source Dataset(s): Run and Anomaly Results
  
 * Threshold
