@@ -1,55 +1,30 @@
 # Key Notions
 
 * Model Run
-    * Rationale: A single execution of the CAE with its own seed; needed to say which run flagged what and which runs processed a tile (CQ1, CQ2, CQ4, CQ5, CQ10). The seed and threshold are parameter instatiation properties of the run.
+    * Rationale: A single execution of the CAE with its own seed; needed to say which run flagged what and which runs processed a tile (CQ1, CQ2, CQ4, CQ5, CQ8, CQ9, CQ10). The seed and threshold are parameter instantiation properties of the run.
     * Connected Pattern: Computational Observation ODP ([Shimizu, C., Hitzler, P., & Vardeman, C. F. (2023). A Pattern for Modeling Computational Observations. CEUR Workshop Proceedings, 3352.](https://corescholar.libraries.wright.edu/cse/709))
     * Source Dataset(s): Run and Anomaly Results
- 
-* Threshold - to be removed
-    * Rationale: The cutoff on reconstruction error that decides whether a patch is flagged; needed to compare runs (CQ1, CQ2, CQ9).
-    * Connected Pattern: Quantity ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/quantity))
-    * Source Dataset(s): Run and Anomaly Results
- 
 
 * Anomaly
     * Rationale: A patch the model flagged in a run; the central entity linking runs, tiles, sites, and assessments (CQ1 to CQ10). This includes a reconstruction error value.
-    * Connected Pattern: Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation))
+    * Connected Pattern: Computational Observation ODP ([Shimizu, C., Hitzler, P., & Vardeman, C. F. (2023). A Pattern for Modeling Computational Observations. CEUR Workshop Proceedings, 3352.](https://corescholar.libraries.wright.edu/cse/709)), Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation))
     * Source Dataset(s): Run and Anomaly Results
- 
-  
-* Reconstruction Error folding this into anomaly
-    * Rationale: The score that caused a patch to be flagged; needed to compare possible-candidate and not-a-candidate anomalies (CQ9).
-    * Connected Pattern: Quantity ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/quantity))
-    * Source Dataset(s): Run and Anomaly Results
- 
 
 * Patch
-    * Rationale: The area the model flags; shared across runs and identified by its tile plus row and column of said tile (CQ1).
+    * Rationale: The area the model flags; shared across runs and identified by its tile plus row and column of said tile (CQ1 thru CQ10).
     * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole))
     * Source Dataset(s): Run and Anomaly Results
  
   
 * Tile
     * Rationale: The LiDAR image unit that contains patches; the main join point across datasets (CQ2 to CQ10). It carries the survey year, county, CRS, and resolution in feet used to compare tiles (CQ3, CQ7, CQ8, CQ10) as properties.
-    * Connected Pattern: Spatial Object ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object)), Spatial Extent ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-extent)), Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole))
+    * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole))
     * Source Dataset(s): LiDAR Tiles, Run and Anomaly Results
- 
 
-* County -- to be deleted as this will now be a property 
-    * Rationale: Groups tiles for the county comparison (CQ10).
-    * Connected Pattern: Part-Whole ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole)), Sequence ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence))
-    * Source Dataset(s): LiDAR Tiles
- 
-  
-* Coordinate Reference System
-    * Rationale: The spatial reference a tile or site location is expressed in; compared between tiles (CQ3) and needed to convert site lat/long into tile coordinates so sites can be placed in tiles (CQ4, CQ5, CQ6, CQ8).
-    * Connected Pattern: Spatial Extent ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-extent))
-    * Source Dataset(s): LiDAR Tiles, Verified Hopewell Sites
- 
 
 * Verified Hopewell Site
-    * Rationale: A known earthwork location used as the reference to compare anomalies against (CQ4, CQ5, CQ6, CQ8). Its lat/long is a plain property, and a site counts as "in" a tile when that location falls inside the tile's bounds.
-    * Connected Pattern: Spatial Object ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object)), Name Stub ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/name-stub))
+    * Rationale: A known earthwork location used as a reference for comparing anomalies (CQ4, CQ5, CQ6, CQ8). Its point location in its geometry, and a site is “in” a tile when that point falls inside the tile’s bounds.
+    * Connected Pattern: Spatial Object ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object))
     * Source Dataset(s): Verified Hopewell Sites
  
   
@@ -58,14 +33,14 @@
     * Connected Pattern: Observation ([MODL](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation))
     * Source Dataset(s): Anomaly Assessments
  
-  
-* Determination (controlled vocabulary)
+
+* Determination
     * Rationale: The fixed set of outcomes of an assessment (CQ6, CQ7, CQ9) not a candidate, possible candidate.
-    * Connected Pattern: 
+    * Connected Pattern: None - controlled vocabulary
     * Source Dataset(s): Anomaly Assessments
  
 
-* Feature Type (controlled vocabulary)
+* Feature Type
     * Rationale: The kind of non-earthwork feature a reviewer identified (CQ7): road, rail, creek, river, pond, other.
-    * Connected Pattern: 
+    * Connected Pattern: None - controlled vocabulary
     * Source Dataset(s): Anomaly Assessments
